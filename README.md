@@ -43,7 +43,7 @@ Paths in the configs are relative to the repository root.
   so that the benchmarks sit in `cqa/benchmarks/`:
 
   ```bash
-  curl -L -o cqa-benchmarks.zip <BENCHMARKS_RELEASE_URL>
+  curl -L -o cqa-benchmarks.zip https://github.com/an-git-sub/MERIT/releases/download/ind%2BH/benchmarks.zip
   unzip -q cqa-benchmarks.zip -d cqa && rm cqa-benchmarks.zip
   ```
 * **CQA, Family 1.** FB15k237+H, NELL995+H and ICEWS18+H come from the
@@ -131,7 +131,7 @@ The checkpoints are published as a release asset. Unpack it into the repository 
 so that they sit in `ckpts/`:
 
 ```bash
-curl -L -o ckpts.zip <CKPTS_RELEASE_URL>
+curl -L -o ckpts.zip https://github.com/an-git-sub/MERIT/releases/download/ckpts/ckpts.zip
 unzip -q ckpts.zip && rm ckpts.zip
 ```
 
