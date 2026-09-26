@@ -228,8 +228,7 @@ class RelTransformerMERIT(nn.Module):
             if impl == "flex":
                 x = x + self._flex_sa_block(layer, layer.norm1(x), mask)
             else:
-                # explicit pre-LN block rather than layer(x, src_mask=mask): at eval the
-                # fused TransformerEncoderLayer fast path mishandles a 3D float mask.
+                # run the pre-LN attention step explicitly
                 x = x + layer._sa_block(layer.norm1(x), mask, None)
             x = x + layer._ff_block(layer.norm2(x))
 
